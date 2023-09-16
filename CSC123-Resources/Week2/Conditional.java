@@ -1,6 +1,8 @@
 
 public class Conditional {
 	
+	public static int x1=10000;
+	
 	public static void main(String[] args) {
 		
 		int choice=1;
@@ -22,6 +24,10 @@ public class Conditional {
 	
 		}
 		
+	}
+	
+	public static int add(int a, int b) {
+		return a+b;
 	}
 }
 
