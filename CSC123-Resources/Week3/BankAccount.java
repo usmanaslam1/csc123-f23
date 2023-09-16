@@ -4,21 +4,23 @@ import java.util.ArrayList;
 //we a create class that is public, visible to everyone
 public class BankAccount {
 	//fields 
-	public String name;
-	public short accountNumber;
-	public boolean open;
-	public ArrayList<Double> transactions=new ArrayList<Double>();
+	private String name;
+	private short accountNumber;
+	private boolean open=true;
+	private ArrayList<Double> transactions=new ArrayList<Double>();
  	
 	//constructor
 
 
 
 public void deposit(double amount) {
+			if(isOpen())
 			transactions.add(amount);
 		
 	}
 	
 	public void withdrawal(double amount) {
+		if(balance()-amount>=0)
 		transactions.add(amount*-1);
 		
 	}
@@ -32,14 +34,20 @@ public void deposit(double amount) {
 	}
 	
 	public double  balance() {
-		return 0;
+		double startingBalance=0;
+		for(double t:transactions) {
+			
+			startingBalance+=t;
+		}
+		return startingBalance;
 	}
 	
 	public void close() {
+		open=false;
 		
 	}
 	
 	public boolean isOpen() {
-		return false;
+		return open;
 	}
 }
