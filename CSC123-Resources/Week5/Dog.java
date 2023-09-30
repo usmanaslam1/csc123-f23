@@ -19,8 +19,8 @@ public class Dog {
 
 	public void setOwner(Owner o) {
 		this.owner=o;
-		if(o.getPet()==null) {
-			o.setPet(this);
+		if(!o.getPets().contains(this)) {
+			o.getPets().add(this);
 		}
 	}
 	

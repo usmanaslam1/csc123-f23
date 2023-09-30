@@ -1,10 +1,11 @@
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class Owner {
 	String name;
 	char gender;
 	
-	Dog pet;
+	ArrayList<Dog> pets=new ArrayList<Dog>();
 	
 	public Owner(String name, char gender) {
 		super();
@@ -12,15 +13,15 @@ public class Owner {
 		this.gender = gender;
 	}
 	
-	public void setPet(Dog pet) {
-		this.pet=pet;
+	public void addPet(Dog pet) {
+		this.pets.add(pet);
 		if(pet.getOwner()==null) {
 			pet.setOwner(this);
 		}
 	}
 	
-	public Dog getPet() {
-		return this.pet;
+	public ArrayList<Dog> getPets() {
+		return this.pets;
 	}
 	
 	public String getName() {
@@ -54,7 +55,7 @@ public class Owner {
 
 	@Override
 	public String toString() {
-		return "Owner [name=" + name + ", gender=" + gender + ", pet=" + pet.name + "]";
+		return "Owner [name=" + name + ", gender=" + gender + ", Number of Pets=" + pets.size() + "]";
 	}
 	
 	
