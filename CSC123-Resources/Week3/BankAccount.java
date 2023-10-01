@@ -4,18 +4,27 @@ import java.util.ArrayList;
 //we a create class that is public, visible to everyone
 public class BankAccount {
 	//fields 
-	private String name;
-	private short accountNumber;
+	
+	private  String name="Default Name";
+	private int accountNumber=1000;
 	private boolean open=true;
 	private ArrayList<Double> transactions=new ArrayList<Double>();
- 	
 	//constructor
 
+	public BankAccount(String name, int accountNumber) {
+		
+		System.out.println(this.name);
+		
+		//name=name;
+		//accountNumber=accountNumber;
+		
+	}
 
+	public static void deposit(double amount) {
+			//if(isOpen())
+		//	transactions.add(amount);
 
-public void deposit(double amount) {
-			if(isOpen())
-			transactions.add(amount);
+			
 		
 	}
 	
