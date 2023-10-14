@@ -1,5 +1,5 @@
 
-public class Animal {
+public  class Animal extends Object{
 	
 	String name;
 	String animalType;
@@ -24,7 +24,7 @@ public class Animal {
 
 
 	public String getAnimalType() {
-		return animalType;
+		return "TYPE IS: "+animalType;
 	}
 
 
