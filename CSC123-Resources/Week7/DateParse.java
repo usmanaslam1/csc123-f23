@@ -1,15 +1,26 @@
 import java.util.Date;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 
 public class DateParse {
 	public static final String PATTERN="dd-MM-yy";
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 		
 		SimpleDateFormat df=new SimpleDateFormat(PATTERN);
 		
-		Date d2=df.parse("10-12-00");
-		System.out.println(d2);
+		try {
+			
+			Date d2=df.parse("10-12hj-00");
+			System.out.println(d2);
+		}
+		
+		finally{
+			System.out.println("oooppps!!");
+		}
+
+		
+		
 		
 	}
 
