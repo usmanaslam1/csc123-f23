@@ -2,7 +2,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 public class Time1 {
 	
-	static final long DATE_TO_YEARS_FACTOR=1000/60/60/24/365;
+	static final long DATE_TO_YEARS_FACTOR=(long)(1000/60/60/24/365);
 	
 	public static void main(String[] args) throws Exception {
 		
@@ -28,7 +28,7 @@ public class Time1 {
 		long delta=todayInMilliseconds-dobInMilliseconds;
 		
 		//Person's age in years
-		long age=delta/1000/60/60/24/365;
+		long age=delta/DATE_TO_YEARS_FACTOR;
 		
 		return age;
 	}

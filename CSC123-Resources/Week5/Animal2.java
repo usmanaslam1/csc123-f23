@@ -12,7 +12,7 @@ public class Animal2 extends Animal{
 	
 	public String getSound() {
 		return this.sound;
-	}
+	} 
 	
 	@Override
 	public String getName() {
