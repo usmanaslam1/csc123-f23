@@ -20,7 +20,7 @@ public class BankAccount {
 		
 	}
 
-	public static void deposit(double amount) {
+	public  void deposit(double amount) {
 			//if(isOpen())
 		//	transactions.add(amount);
 
