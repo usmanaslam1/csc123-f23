@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
 
 public class MapDemo1 {
@@ -18,6 +19,8 @@ public class MapDemo1 {
 		studentJoe.put("Age", "15");
 		studentJoe.put("GPA", "4");
 		studentJoe.put("GPA", "238");
+		
+		Set keys=studentJoe.keySet();
 		
 		
 		for(String key:studentJoe.keySet()) {
