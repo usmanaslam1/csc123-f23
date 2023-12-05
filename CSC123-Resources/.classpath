@@ -13,5 +13,6 @@
 	<classpathentry kind="src" path="Week8"/>
 	<classpathentry kind="src" path="Week10"/>
 	<classpathentry kind="src" path="Week11"/>
+	<classpathentry kind="src" path="DesignPatterns"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

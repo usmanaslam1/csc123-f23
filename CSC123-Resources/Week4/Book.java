@@ -7,14 +7,18 @@ public class Book {
 	private int numberOfPages;
 	private String authorName;
 	private int amazonRank;
+	private int bookReferenceNumber;
+	private static int counter=100;
 	
 	//constructors
 	
 	public Book(String iSBN, String authorName) {
 		ISBN = iSBN;
 		this.authorName = authorName;
+		this.bookReferenceNumber=counter++;
 	}
 
+	
 	public Book(String iSBN, int numberOfPages, String authorName) {
 		super();
 		ISBN = iSBN;
@@ -22,6 +26,11 @@ public class Book {
 		this.authorName = authorName;
 	}
 
+	public int getBookRef() {
+		return this.bookReferenceNumber;
+	}
+	
+	
 	public String getISBN() {
 		return ISBN;
 	}
